@@ -9,7 +9,23 @@ public class Main {
 
         ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
         Doctor doctor = context.getBean(Doctor.class);
-        doctor.assist();
+        //Nurse nurse = context.getBean(Nurse.class);
+
+        //Method two that data can be extracted is through casting
+
+        //Nurse nurse = (Nurse) context.getBean("nurse");
+        //nurse.assist();
+        //doctor.assist();
+
+        //Calling the classes though Interfaces
+        Staff staff = context.getBean(Nurse.class);
+        staff.assist();
+
+        //Calling the Doctor Class through the Interface
+        Staff doc = context.getBean(Doctor.class);
+        doc.assist();
+
+
 
     }
 }
