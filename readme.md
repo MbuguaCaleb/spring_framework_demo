@@ -14,8 +14,8 @@ BEANS  ETC
 
 THEN REFERENCING THEM IN MY CLASS
 
-
-
+When we get the classes via XML without having to Inject them or
+without raw Java, we are extracting them from the Spring Container.
 
 ```
 
